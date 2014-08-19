@@ -29,7 +29,7 @@
 					<div id="nt-example3-container">
 						<!-- <i class="fa fa-arrow-up" id="nt-example3-prev"></i> -->
 		                <ul id="nt-example3">
-		                    <li>Lorem</li>
+		                    <li><a href="#">Lorem</a></li>
 		                    <li>Ipsum</li>
 		                    <li>Praesent</li>
 		                    <li>Nunc</li>
@@ -43,55 +43,7 @@
 		            </div>
 				</div>
 				
-				<div class="col-md-8 centered">
-					<h3>BONUS : "ROULETTE" EXAMPLE, USING CALLBACKS & METHODS</h3>
-					<pre><code class="language-javascript example-code">var state = 'stopped';
-var speed;
-var add;
-var nt_example3 = $('#nt-example3').newsTicker({
-    row_height: 80,
-    max_rows: 1,
-    duration: 0,
-    speed: 10,
-    autostart: 0,
-    pauseOnHover: 0,
-    hasMoved: function() {
-    	if (speed > 700) {
-    		$('#nt-example3').newsTicker("stop");
-    		console.log('stop')
-    		$('#nt-example3-button').text("RESULT: " + $('#nt-example3 li:first').text().toUpperCase());
-    		setTimeout(function() {
-    			$('#nt-example3-button').text("START");
-    			state = 'stopped';
-    		},2500);
-    		
-    	}
-    	else if (state == 'stopping') {
-    		add = add * 1.4;
-    		speed = speed + add;
-    		console.log(speed)
-    		$('#nt-example3').newsTicker('updateOption', "duration", speed + 25);
-    		$('#nt-example3').newsTicker('updateOption', "speed", speed);
-    	}
-    }
-});
-$('#nt-example3-button').click(function(){
-	if (state == 'stopped') {
-    	state = 'turning';
-    	speed = 1;
-    	add = 1;
-    	$('#nt-example3').newsTicker('updateOption', "duration", 0);
-    	$('#nt-example3').newsTicker('updateOption', "speed", speed);
-    	nt_example3.newsTicker('start');
-    	$(this).text("STOP");
-    }
-    else if (state == 'turning') {
-    	state = 'stopping';
-    	$(this).text("WAITING...");
-    }
-});</code></pre>
 				</div>
-			</div>
 		</div>
 	</div>
 
