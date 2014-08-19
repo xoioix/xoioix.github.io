@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>JQuery xxxxxxxx News Ticker | risq</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/prism.css" rel="stylesheet" />
+    <link href="/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="green">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 centered">
+					<div id="nt-example3-container">
+						<!-- <i class="fa fa-arrow-up" id="nt-example3-prev"></i> -->
+		                <ul id="nt-example3">
+		                    <li>Lorem</li>
+		                    <li>Ipsum</li>
+		                    <li>Praesent</li>
+		                    <li>Nunc</li>
+		                    <li>Morbi</li>
+		                    <li>Pharetra</li>
+		                    <li>Maecenas</li>
+		                    <li>Onec</li>
+		                </ul>
+		                <span class="button" id="nt-example3-button">START</span>
+		                <!-- <i class="fa fa-arrow-down" id="nt-example3-next"></i> -->
+		            </div>
+				</div>
+				
+				<div class="col-md-8 centered">
+					<h3>BONUS : "ROULETTE" EXAMPLE, USING CALLBACKS & METHODS</h3>
+					<pre><code class="language-javascript example-code">var state = 'stopped';
+var speed;
+var add;
+var nt_example3 = $('#nt-example3').newsTicker({
+    row_height: 80,
+    max_rows: 1,
+    duration: 0,
+    speed: 10,
+    autostart: 0,
+    pauseOnHover: 0,
+    hasMoved: function() {
+    	if (speed > 700) {
+    		$('#nt-example3').newsTicker("stop");
+    		console.log('stop')
+    		$('#nt-example3-button').text("RESULT: " + $('#nt-example3 li:first').text().toUpperCase());
+    		setTimeout(function() {
+    			$('#nt-example3-button').text("START");
+    			state = 'stopped';
+    		},2500);
+    		
+    	}
+    	else if (state == 'stopping') {
+    		add = add * 1.4;
+    		speed = speed + add;
+    		console.log(speed)
+    		$('#nt-example3').newsTicker('updateOption', "duration", speed + 25);
+    		$('#nt-example3').newsTicker('updateOption', "speed", speed);
+    	}
+    }
+});
+$('#nt-example3-button').click(function(){
+	if (state == 'stopped') {
+    	state = 'turning';
+    	speed = 1;
+    	add = 1;
+    	$('#nt-example3').newsTicker('updateOption', "duration", 0);
+    	$('#nt-example3').newsTicker('updateOption', "speed", speed);
+    	nt_example3.newsTicker('start');
+    	$(this).text("STOP");
+    }
+    else if (state == 'turning') {
+    	state = 'stopping';
+    	$(this).text("WAITING...");
+    }
+});</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/prism.js"></script>
+    <script src="/assets/js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="/jquery.newsTicker.js"></script>
+    <script>
+    		$('a[href*=#]').click(function(e) {
+			    var href = $.attr(this, 'href');
+			    if (href != "#") {
+				    $('html, body').animate({
+				        scrollTop: $(href).offset().top - 81
+				    }, 500);
+				}
+				else {
+					$('html, body').animate({
+				        scrollTop: 0
+				    }, 500);
+				}
+			    return false;
+			});
+
+    		$(window).load(function(){
+	            $('code.language-javascript').mCustomScrollbar();
+	        });
+            var state = 'stopped';
+            var speed;
+            var add;
+            var nt_example3 = $('#nt-example3').newsTicker({
+                row_height: 80,
+                max_rows: 1,
+                duration: 0,
+                speed: 10,
+                autostart: 0,
+                pauseOnHover: 0,
+                hasMoved: function() {
+                	if (speed > 700) {
+                		$('#nt-example3').newsTicker("stop");
+                		console.log('stop')
+                		$('#nt-example3-button').text("RESULT: " + $('#nt-example3 li:first').text().toUpperCase());
+                		setTimeout(function() {
+                			$('#nt-example3-button').text("START");
+                			state = 'stopped';
+                		},2500);
+                		
+                	}
+                	else if (state == 'stopping') {
+                		add = add * 1.4;
+                		speed = speed + add;
+                		console.log(speed)
+                		$('#nt-example3').newsTicker('updateOption', "duration", speed + 25);
+                		$('#nt-example3').newsTicker('updateOption', "speed", speed);
+                	}
+                }
+            });
+            
+            $('#nt-example3-button').click(function(){
+            	if (state == 'stopped') {
+	            	state = 'turning';
+	            	speed = 1;
+	            	add = 1;
+	            	$('#nt-example3').newsTicker('updateOption', "duration", 0);
+	            	$('#nt-example3').newsTicker('updateOption', "speed", speed);
+	            	nt_example3.newsTicker('start');
+	            	$(this).text("STOP");
+	            }
+	            else if (state == 'turning') {
+	            	state = 'stopping';
+	            	$(this).text("WAITING...");
+	            }
+            });
+        </script>
+
+
+  </body>
+</html>
