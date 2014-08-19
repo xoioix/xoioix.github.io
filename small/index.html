@@ -68,7 +68,28 @@
 		</div>
 	</div>
 
+<div class="">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 centered">
+					<div id="nt-example2-container">
+		                <ul id="nt-example2">
+		                    <li>Etiam imperdiet volutpat libero eu tristique. Aenean, rutrum felis in. <a href="#">Read more...</a></li>
+		                    <li>Curabitur porttitor ante eget hendrerit adipiscing. Maecenas at magna. <a href="#">Read more...</a></li>
+		                    <li>Praesent ornare nisl lorem, ut condimentum lectus gravida ut. <a href="#">Read more...</a></li>
+		                    <li>Nunc ultrices tortor eu massa placerat posuere. Vivamus viverra sagittis. <a href="#">Read more...</a></li>
+		                    <li>Morbi sodales tellus sit amet leo congue bibendum. Ut non mauris eu neque. <a href="#">Read more...</a></li>
+		                    <li>In pharetra suscipit orci sed viverra. Praesent at sollicitudin tortor, id. <a href="#">Read more...</a> </li>
+		                    <li>Maecenas nec ligula sed est suscipit aliquet sed eget ipsum, suspendisse. <a href="#">Read more...</a></li>
+		                    <li>Onec bibendum consectetur diam, nec euismod urna venenatis eget.. <a href="#">Read more...</a> </li>
+		                </ul>
+		            </div>
+				</div>
+				
 
+			</div>
+		</div>
+	</div>
 
 
     <!-- Bootstrap core JavaScript
@@ -91,6 +112,11 @@
                 pauseOnHover: 0
             });
             var nt_example1 = $('#nt-example1').newsTicker({
+                row_height: 80,
+                max_rows: 1,
+                duration: 4000
+            });
+            var nt_example1 = $('#nt-example2').newsTicker({
                 row_height: 80,
                 max_rows: 1,
                 duration: 4000
