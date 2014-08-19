@@ -60,24 +60,6 @@
     <script src="/assets/js/jquery.mCustomScrollbar.min.js"></script>
     <script src="/jquery.newsTicker.js"></script>
     <script>
-    		$('a[href*=#]').click(function(e) {
-			    var href = $.attr(this, 'href');
-			    if (href != "#") {
-				    $('html, body').animate({
-				        scrollTop: $(href).offset().top - 81
-				    }, 500);
-				}
-				else {
-					$('html, body').animate({
-				        scrollTop: 0
-				    }, 500);
-				}
-			    return false;
-			});
-
-    		$(window).load(function(){
-	            $('code.language-javascript').mCustomScrollbar();
-	        });
             var state = 'stopped';
             var speed;
             var add;
