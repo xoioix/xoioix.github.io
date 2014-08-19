@@ -286,27 +286,12 @@ $('#nt-example3-button').click(function(){
 	<div class="title" id="usage">
 		<div class="row">
 			<div class="col-lg-12 centered">
-				<h3>USAGE</h3>
+			<!--	<h3>USAGE</h3>-->
 			</div>
 		</div>
 	</div>
 	<div class="white">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-10 col-lg-offset-1">
-					<p>
-						HTML: a simple list, which may be fully customized.
-					</p>
-					<pre><code class="language-markup ">&lt;ul class="newsticker">
-    &lt;li>Etiam imperdiet volutpat libero eu tristique.&lt;/li>
-    &lt;li>Curabitur porttitor ante eget hendrerit adipiscing.&lt;/li>
-    &lt;li>Praesent ornare nisl lorem, ut condimentum lectus gravida ut.&lt;/li>
-    &lt;li>Nunc ultrices tortor eu massa placerat posuere.&lt;/li>
-&lt;/ul>
-&lt;script src="http://code.jquery.com/jquery-1.10.1.min.js"&gt;&lt;/script>
-&lt;script src="js/newsTicker.js"&gt;</script></code></pre>
-				</div>
-			</div>
+		<div class="container"></div>
 		</div>
 	</div>
 	<div class="green">
@@ -412,316 +397,42 @@ nt.newsTicker('updateOption','direction','down');</script></code></pre>
 	<div class="title" id="options-callbacks">
 		<div class="row">
 			<div class="col-lg-12 centered">
-				<h3>OPTIONS & CALLBACKS</h3>
+				<!--<h3>OPTIONS & CALLBACKS</h3>-->
 			</div>
 		</div>
 	</div>
 	<div class="white">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-10 col-lg-offset-1">
-					<table class="table table-striped params-table">
-					    <thead>
-					        <tr>
-					            <th>Parameter</th>					            
-					            <th>Usage</th>
-					            <th>Type/Values</th>
-					            <th>Default</th>
-					        </tr>
-					    </thead>
-					    <tbody>
-					        <tr>
-					            <td><code>row_height</code></td>
-					            <td>defines the height (in px) of one row</td>
-					            <td><code>int</code></td>
-					            <td><em>22</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>max_row</code></td>
-					            <td>defines the number of rows displayed at the same time</td>
-					            <td><code>int</code></td>
-					            <td><em>3</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>speed</code></td>
-					            <td>defines the animation speed (in ms)of the rows moving up or
-					            down</td>
-					            <td><code>int</code> <em>(in ms)</em></td>
-					            <td><em>400</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>duration</code></td>
-					            <td>defines the times (in ms) before the rows automatically
-					            move</td>
-					            <td><code>int</code> <em>(in ms)</em></td>
-					            <td><em>2500</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>direction</code></td>
-					            <td>defines the direction of the rows movement</td>
-					            <td><code>up</code> <em>or</em> <code>down</code></td>
-					            <td><em>'up'</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>autostart</code></td>
-					            <td>enable/disable auto start on load</td>
-					            <td><code>0</code> <em>or</em> <code>1</code></td>
-					            <td><em>1</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>pauseOnHover</code></td>
-					            <td>enable/disable pause when mouse hovers the newsTicker
-					            element</td>
-					            <td><code>0</code> <em>or</em> <code>1</code></td>
-					            <td><em>1</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>nextButton</code></td>
-					            <td>set the element triggering <code>next</code> action on
-					            click</td>
-					            <td><code>JQuery element</code></td>
-					            <td><em>null</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>prevButton</code></td>
-					            <td>set the element triggering <code>prev</code> action on
-					            click</td>
-					            <td><code>JQuery element</code></td>
-					            <td><em>null</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>startButton</code></td>
-					            <td>set the element triggering <code>start</code> action on
-					            click</td>
-					            <td><code>JQuery element</code></td>
-					            <td><em>null</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>stopButton</code></td>
-					            <td>set the element triggering <code>stop</code> action on
-					            click</td>
-					            <td><code>JQuery element</code></td>
-					            <td><em>null</em></td>
-					        </tr>
-					        <tr>
-					            <td><code>hasMoved</code></td>
-					            <td><code>callback</code> called at the end of every movement
-					            animation</td>
-					            <td><code>function</code></td>
-					            <td></td>
-					        </tr>
-					        <tr>
-					            <td><code>movingUp</code></td>
-					            <td><code>callback</code> called before launching <code>moving
-					            up</code> action</td>
-					            <td><code>function</code></td>
-					            <td></td>
-					        </tr>
-					        <tr>
-					            <td><code>movingDown</code></td>
-					            <td><code>callback</code> called before launching <code>moving
-					            down</code> action</td>
-					            <td><code>function</code></td>
-					            <td></td>
-					        </tr>
-					        <tr>
-					            <td><code>start</code></td>
-					            <td><code>callback</code> called on <code>start</code> action</td>
-					            <td><code>function</code></td>
-					            <td></td>
-					        </tr>
-					        <tr>
-					            <td><code>stop</code></td>
-					            <td><code>callback</code> called on <code>stop</code> action</td>
-					            <td><code>function</code></td>
-					            <td></td>
-					        </tr>
-					        <tr>
-					            <td><code>pause</code></td>
-					            <td><code>callback</code> called on <code>pause</code> action
-					            (triggered on <code>mouseOver</code> if
-					            <code>pauseOnHover=1</code>)</td>
-					            <td><code>function</code></td>
-					            <td></td>
-					        </tr>
-					        <tr>
-					            <td><code>unpause</code></td>
-					            <td>called on <code>unpause</code> action (triggered on
-					            <code>mouseOut</code> if <code>pauseOnHover=1</code>)</td>
-					            <td><code>function</code></td>
-					            <td></td>
-					        </tr>
-					    </tbody>
-					</table>
-				</div>
-			</div>
-		</div>
+		<div class="container"></div>
 	</div>
 	<div class="title" id="methods">
 		<div class="row">
 			<div class="col-lg-12 centered">
-				<h3>METHODS</h3>
+			<!--	<h3>METHODS</h3>-->
 			</div>
 		</div>
 	</div>
 	<div class="green">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-10 col-lg-offset-1">
-					<p>
-						After initializing a newsTicker instance, methods are called with
-					</p>
-					<pre><code class="language-javascript ">.newsTicker('methodName', 'param1', 'param2', ... )</script></code></pre>
-					<p>
-						Example :
-					</p>
-					<pre><code class="language-javascript ">var nt = $('.newsticker').newsTicker();
-nt.newsTicker('stop');
-nt.newsTicker('updateOption','direction','down');
-var state = nt.newsTicker('getState');</script></code></pre>
-				</div>
-			</div>
 		</div>
 	</div>
 	<div class="white">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-10 col-lg-offset-1">
-					<h2 class="header">Methods List</h2>
-					<table class="table table-striped params-table">
-					    <thead>
-					        <tr>
-					            <th>Method</th>
-					            <th>Parameter(s)</th>
-					            <th>Action</th>
-					        </tr>
-					    </thead>
-					    <tbody>
-					        <tr>
-					            <td><code>start</code></td>
-					            <td></td>
-					            <td>starts moving newsTicker elements</td>
-					        </tr>
-					        <tr>
-					            <td><code>stop</code></td>
-					            <td></td>
-					            <td>stops moving newsTicker elements</td>
-					        </tr>
-					        <tr>
-					            <td><code>updateOption</code></td>
-					            <td><code>optionName</code>, <code>value</code></td>
-					            <td>update an option (see <strong>Options &amp; Callbacks</strong>
-					            for options list)</td>
-					        </tr>
-					        <tr>
-					            <td><code>getState</code></td>
-					            <td></td>
-					            <td>returns current state : <code>0</code> = stopped,
-					            <code>1</code> = started, <code>2</code> = paused (and
-					            started)</td>
-					        </tr>
-					        <tr>
-					            <td><code>pause</code></td>
-					            <td></td>
-					            <td>pauses newsTicker elements without stopping them - the
-					            newsTicker has to be started to be able to pause it (the
-					            <code>pause</code> method is called on <code>mouseOver</code> if
-					            <code>pauseOnHover</code> = 1)</td>
-					        </tr>
-					        <tr>
-					            <td><code>unpause</code></td>
-					            <td></td>
-					            <td>unpauses newsTicker elements - the newsTicker has to be started
-					            &amp; paused to be able to unpause it (the <code>unpause</code>
-					            method is called on <code>mouseOut</code> if
-					            <code>pauseOnHover</code> = 1)</td>
-					        </tr>
-					        <tr>
-					            <td><code>moveDown</code></td>
-					            <td></td>
-					            <td>moves elements down</td>
-					        </tr>
-					        <tr>
-					            <td><code>moveUp</code></td>
-					            <td></td>
-					            <td>moves elements up</td>
-					        </tr>
-					        <tr>
-					            <td><code>moveNext</code></td>
-					            <td></td>
-					            <td>moves up or down according to the current
-					            <code>direction</code> option</td>
-					        </tr>
-					        <tr>
-					            <td><code>movePrev</code></td>
-					            <td></td>
-					            <td>moves up or down according to the current
-					            <code>direction</code> option</td>
-					        </tr>
-					        <tr>
-					            <td><code>move</code></td>
-					            <td></td>
-					            <td>equivalent to <code>moveNext</code>, but will not move if
-					            <code>paused</code></td>
-					        </tr>
-					    </tbody>
-					</table>
-				</div>
-			</div>
-		</div>
+		<div class="container"></div>
 	</div>
 
 	<div class="download-title" id="download-title">
 		<div class="container">
 			<div class="row centered">
-				<h3>DOWNLOAD</h3>
+			<!--	<h3>DOWNLOAD</h3>-->
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /download-title -->
 	
 
 	<div id="download">
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="col-md-6 download-link">
-						<a href="https://github.com/risq/jquery-advanced-news-ticker/archive/master.zip" target="_blank">
-							<i class="fa fa-download"></i> 
-							<div class="download-text">DOWNLOAD</div>
-						</a>
-					</div>
-					<div class="col-md-6 download-link">
-						<a href="https://github.com/risq/jquery-advanced-news-ticker" target="_blank">
-							<i class="fa fa-github"></i> 
-							<div class="download-text">FORK ON GITHUB</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div><!-- /container -->
+		<div class="container"></div><!-- /container -->
 	</div><!-- /download -->
 	<div id="f">
-		<div class="container">
-			<div class="row">
-			<h3>Share this page</h3>
-				<div id="s-icons">
-					<a href="http://www.facebook.com/sharer.php?u=http://risq.github.io/jquery-advanced-news-ticker/" target="_blank"><span class="fa fa-facebook"></span></a>
-					 
-					<a href="http://twitter.com/share?url=http://risq.github.io/jquery-advanced-news-ticker/&text=JQuery Advanced News Ticker Plugin" target="_blank"><span class="fa fa-twitter"></span></a>
-					 
-					<a href="https://plus.google.com/share?url=http://risq.github.io/jquery-advanced-news-ticker/" target="_blank"><span class="fa fa-google-plus"></span></a>
-					 					 					 
-					<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://risq.github.io/jquery-advanced-news-ticker/" target="_blank"><span class="fa fa-linkedin"></span></a>
-					 
-					<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><span class="fa fa-pinterest"></span></a>
-					 					 
-					<a href="mailto:?Subject=JQuery Advanced News Ticker Plugin&Body=http://risq.github.io/jquery-advanced-news-ticker/"><span class="fa fa-envelope"></span></a>
-					 
- 					<script id='fbkt5nx'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=risq&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=62;f.width=55;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbkt5nx');</script>
-				</div>
-				<p>Created by <a href="https://github.com/risq" target="_blank">risq</a></p>
-			</div>
-		</div>
+		<div class="container"></div>
 	</div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -838,13 +549,6 @@ var state = nt.newsTicker('getState');</script></code></pre>
             });
         </script>
 
-        <script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-48039933-1', 'risq.github.io');
-			ga('send', 'pageview');
-		</script>
+
   </body>
 </html>
